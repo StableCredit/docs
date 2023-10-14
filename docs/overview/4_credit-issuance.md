@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Credit Issuance
 
-Each Stable Credit Network is also equipped with a `CreditIssuer` contract that is responsible for issuing credit lines to members. In its most basic form, the `CreditIssuer` enables addresses with "Operator" access to create new credit lines with supplied credit terms. These terms include a credit limit that regulates the max amount of credits a member can mint and a credit period that denotes the expiration of said minted credits. However, Credit Terms and underwriting logic should be extended to accommodate more complex network requirements.
+Each Stable Credit Network is also equipped with a `CreditIssuer` contract that is responsible for issuing credit lines to members. In its most basic form, the `CreditIssuer` enables addresses with "Operator" access to create new credit lines with supplied credit terms. These terms include a credit limit that regulates the max amount of credits a member can mint and a credit period that denotes the expiration of said minted credits. However, Credit Terms and underwriting logic should be extended to accommodate more complex network requirements and specific underwriting processes that network operators choose to include.
 
 ## Credit Terms
 

@@ -6,12 +6,20 @@ sidebar_position: 1
 
 <img src="/img/ben-frank.png"/>
 
-The goal of this project is to create a more equitable and sustainable financial system that enables communities to build prosperity together. This is a deep dive into the **Stable Credit** protocol and how it enables the ancient alternative economic model of _mutual credit_ to scale in the modern world.
+The stable credit protocol is an alternative economic system that enables any group of participants to build a stable, fair, and transparent financial system that minimizes the amount of outside or fiat capital needed. Stable Credits address the scaling and securitization challenges faced by most credit networks today. This is a deep dive into the Stable Credit protocol and how it enables the ancient alternative economic model of [**mutual credit**](https://en.wikipedia.org/wiki/Mutual_credit) to scale in the modern world.
 
 ## Mutual Credit
 
-A mutual credit network is a trading network where participants can extend credit to one another in exchange for network offerings. The network's currency is created when members extend credit to one another and is destroyed when debts are repaid. Traditionally, mutual credit network currency is not backed by any asset or collateral but by the mutual trust of the network's members.
+A mutual credit network is a trading network where participants can extend credit to one another in exchange for goods and services that are offered by other in network participants. The network's currency is created when members extend credit to one another and is destroyed when debts are repaid. Traditionally, mutual credit network currency is not backed by any asset or collateral; instead it’s backed by the mutual trust of the network's members.
+
+Stable Credits are created when a network member utilizes their Credit Line to overdraft their network account in order to transfer credits to other network members. While the recipient of the transfer receives newly minted credits, the sender’s network account records the newly created debt as a negative balance.
+
+<img src="/img/mutual-1.png"/>
+
+Likewise, Stable Credits sent to indebted accounts are burned on arrival, while the recipient’s negative balance contracts accordingly.
+
+<img src="/img/mutual-2.png"/>
 
 ## Stable Credit
 
-The **Stable Credit** protocol extends the concept of mutual credit to include a shared [**Assurance Pool**](/) that backs the network currency. This enables networks to scale beyond the social trust of its members by empowering members to contribute to the network resiliency together. The **Stable Credit** protocol is designed to be a building block for a new generation of mutual credit networks that can scale to new heights, allowing larger groups to collaborate in mutuality.
+The **Stable Credit** protocol extends the concept of mutual credit to include a shared **Assurance Pool** that backs the network currency. This enables networks to scale beyond the social trust of its members by empowering members to contribute to the network resiliency together. The **Stable Credit** protocol is designed to be a building block to empower a new generation of mutual credit networks that can scale into viable financial systems that enable larger groups to collaborate in mutuality without large quantities of external capital and correspondingly high interest rates.
