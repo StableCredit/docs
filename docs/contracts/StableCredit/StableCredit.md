@@ -344,23 +344,6 @@ function decreaseAllowance(address spender, uint256 subtractedValue) external no
 |---|---|---|
 | _0 | bool | undefined |
 
-### feeManager
-
-```solidity
-function feeManager() external view returns (contract IFeeManager)
-```
-
-
-
-*the fee manager contract which manages transaction fee collection and distribution*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract IFeeManager | undefined |
-
 ### increaseAllowance
 
 ```solidity
@@ -482,22 +465,6 @@ enables network admin to set the credit issuer address
 | Name | Type | Description |
 |---|---|---|
 | _creditIssuer | address | address of credit issuer contract |
-
-### setFeeManager
-
-```solidity
-function setFeeManager(address _feeManager) external nonpayable
-```
-
-enables network admin to set the fee manager address
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _feeManager | address | address of fee manager contract |
 
 ### symbol
 
@@ -787,22 +754,6 @@ event CreditLineWrittenOff(address member, uint256 amount)
 |---|---|---|
 | member  | address | undefined |
 | amount  | uint256 | undefined |
-
-### FeeManagerUpdated
-
-```solidity
-event FeeManagerUpdated(address feeManager)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| feeManager  | address | undefined |
 
 ### Initialized
 

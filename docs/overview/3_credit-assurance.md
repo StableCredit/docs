@@ -4,15 +4,16 @@ sidebar_position: 3
 
 # Credit Assurance
 
-In order for Stable Credit networks to scale beyond the social trust of its members, assurance is introduced to enable the trust of the network as a whole. Assurance exists in order to add resiliency to the system by addressing the presence of lost debt. Each network is equipped with an `AssurancePool` smart contract that enables members to participate in assuring the network currency. The AssurancePool exists firstly to incentivize members to participate in the removal of lost debt.
+In order for Stable Credit networks to scale beyond the social trust of its members, assurance is introduced to enable the trust of the network as a whole. Assurance exists in order to add resiliency to the system by addressing the potential risks of **lost debt**. Each network is equipped with an `AssurancePool` smart contract that enables members to participate in assuring the network currency. The AssurancePool exists firstly to incentivize members to participate in the removal of lost debt.
 
 ## Lost Debt Removal
 
-Members who hold positive balances of credits are able to participate in the removal of lost debt by converting their credits into the network's reserve currency. This reduces both the lost debt balance and the total supply of credits, which in turn addresses the inflationary pressure of lost debt. To incentivize the participation of bad debt removal, members are reimbursed in **Reserve Currency** by the `AssurancePool` for the value of lost debt removed.
+Members who hold positive balances of credits are able to participate in the removal of lost debt by converting their credits into the network's reserve currency. This reduces both the lost debt balance and the total supply of credits, which in turn addresses the inflationary pressure of lost debt. To incentivize the participation of bad debt removal, members are reimbursed in **Reserve Currency** by the `AssurancePool` for the same value of lost debt that was removed.
 
 ## Reserve Currency
 
-Each `AssurancePool` designates a **Reserve Currency** that is used as the network currency's "soft peg". Typically, stablecoins are centrally collateralized or utilize an algorithm to manipulate the market rate of the currency in order to reach and maintain a stable market price. Because Stable Credits are not intended to be openly traded for other currency, credits are soft pegged to the Reserve Currency. Thus the perceived value of a credit is determined by a few key points.
+Each `AssurancePool` designates a **Reserve Currency** that is used as the network credit currency's soft peg. Typically, stablecoins are centrally collateralized or utilize an algorithm to manipulate the market rate of the currency in order to reach and maintain a stable market price. Because Stable Credits are not intended to be openly traded for other currency, credits are soft pegged to the Reserve Currency.
+The perceived value of a credit is determined by the following points:
 
 1. Credits only exist as a result of member debt. In order for credits to exist, there must be an equal amount of debt in the network.
 2. Stable Credit debt can be paid using the network's reserve currency on a 1:1 basis, giving the perceived value of a 1:1 conversion.

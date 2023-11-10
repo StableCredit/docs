@@ -6,11 +6,11 @@ sidebar_position: 1
 
 <img src="/img/ben-frank.png"/>
 
-The stable credit protocol is an alternative economic system that enables any group of participants to build a stable, fair, and transparent financial system that minimizes the amount of outside or fiat capital needed. Stable Credits address the scaling and securitization challenges faced by most credit networks today. This is a deep dive into the Stable Credit protocol and how it enables the ancient alternative economic model of [**mutual credit**](https://en.wikipedia.org/wiki/Mutual_credit) to scale in the modern world.
+The stable credit protocol is an alternative economic system that enables any group of participants to exchange goods and services by minimizing the amount of external capital needed. Stable Credits address the scaling and securitization challenges faced by most alternative economic networks today. These docs are a deep dive into the Stable Credit protocol and how it enables the ancient alternative economic model of [mutual credit](https://en.wikipedia.org/wiki/Mutual_credit) to scale in the modern world.
 
 ## Mutual Credit
 
-A mutual credit network is a trading network where participants can extend credit to one another in exchange for goods and services that are offered by other in network participants. The network's currency is created when members extend credit to one another and is destroyed when debts are repaid. Traditionally, mutual credit network currency is not backed by any asset or collateral; instead it’s backed by the mutual trust of the network's members.
+A mutual credit network is a trading network where participants can extend credit to one another in exchange for goods and services that are offered by other in network participants. An internal ledger keeps track of the exchanges by recording new issuances of credits when trades occur, and concurrently destroying them when debts are repaid. Traditionally, mutual credit network currency is not backed by any asset or collateral; instead it’s backed by the mutual trust of the network's members.
 
 Stable Credits are created when a network member utilizes their Credit Line to overdraft their network account in order to transfer credits to other network members. While the recipient of the transfer receives newly minted credits, the sender’s network account records the newly created debt as a negative balance.
 
