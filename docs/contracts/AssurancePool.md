@@ -55,46 +55,6 @@ function assuranceOracle() external view returns (contract IAssuranceOracle)
 |---|---|---|
 | _0 | contract IAssuranceOracle | undefined |
 
-### convertCreditsToDepositToken
-
-```solidity
-function convertCreditsToDepositToken(uint256 creditAmount) external view returns (uint256)
-```
-
-converts the credit amount to the deposit token denomination.
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| creditAmount | uint256 | credit amount to convert to deposit token denomination. |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | credit currency conversion. |
-
-### convertDeposits
-
-```solidity
-function convertDeposits(address tokenIn, uint24 poolFee, uint256 amountOutMinimum) external nonpayable
-```
-
-enables caller to swap collected deposit tokens for reserve tokens and allocate into the necessary RTD dependant reserve.
-
-*this requires the caller to provide the most efficient &quot;pool fee&quot; as well as the most recently quoted &quot;minimum amount out&quot; in the context of the referenced liquidity pool.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenIn | address | token to swap for reserve tokens. |
-| poolFee | uint24 | pool fee to use for settlement swap. |
-| amountOutMinimum | uint256 | minimum amount of reserve tokens to receive from tokenIn swap. |
-
 ### convertReserveTokenToStableCredit
 
 ```solidity
@@ -203,23 +163,6 @@ enables caller to deposit reserve tokens into the primary reserve.
 |---|---|---|
 | amount | uint256 | amount of reserve token to deposit. |
 
-### depositToken
-
-```solidity
-function depositToken() external view returns (contract IERC20Upgradeable)
-```
-
-Exposes the ERC20 interface of the deposit token.
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract IERC20Upgradeable | deposit token of the reserve pool. |
-
 ### excessBalance
 
 ```solidity
@@ -257,7 +200,7 @@ returns true if the primary reserve is greater than or equal to the target RTD.
 ### initialize
 
 ```solidity
-function initialize(address _stableCredit, address _reserveToken, address _depositToken, address _swapRouter) external nonpayable
+function initialize(address _stableCredit, address _reserveToken) external nonpayable
 ```
 
 initializes the reserve token and deposit token to be used for assurance, as well as assigns the stable credit and swap router contracts.
@@ -270,8 +213,6 @@ initializes the reserve token and deposit token to be used for assurance, as wel
 |---|---|---|
 | _stableCredit | address | address of the stable credit contract to assure. |
 | _reserveToken | address | address of the reserve token to use for assurance. |
-| _depositToken | address | address of the deposit token to use for assurance. |
-| _swapRouter | address | address of the UniSwap swap router. |
 
 ### neededReserves
 
@@ -461,22 +402,6 @@ function setAssuranceOracle(address _assuranceOracle) external nonpayable
 |---|---|---|
 | _assuranceOracle | address | undefined |
 
-### setDepositToken
-
-```solidity
-function setDepositToken(address _depositToken) external nonpayable
-```
-
-This function allows the risk manager to set the deposit token.
-
-*Setting the deposit token to 0x0 will allow the AssurancePool to accept ETH (native currency) deposits.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _depositToken | address | address of the new deposit token. |
-
 ### setReserveToken
 
 ```solidity
@@ -509,23 +434,6 @@ function stableCredit() external view returns (contract IStableCredit)
 | Name | Type | Description |
 |---|---|---|
 | _0 | contract IStableCredit | undefined |
-
-### swapRouter
-
-```solidity
-function swapRouter() external view returns (contract ISwapRouter)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract ISwapRouter | undefined |
 
 ### targetRTD
 

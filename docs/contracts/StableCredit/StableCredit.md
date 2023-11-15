@@ -4,7 +4,7 @@
 
 > StableCredit contract
 
-Extends the ERC20 standard to include mutual credit functionality where users can mint tokens into existence by utilizing their lines of credit. Credit defaults result in the transfer of the outstanding credit balance to the network debt balance.
+Extends the ERC20 standard to include mutual credit functionality where users can mint tokens into existence by utilizing their lines of credit. Credit defaults result in the transfer of the outstanding credit balance to the lost debt balance.
 
 *Restricted functions are only callable by network operators.*
 
@@ -33,7 +33,7 @@ initializes ERC20 with the name and symbol provided.
 function __StableCredit_init(string name_, string symbol_, address access_) external nonpayable
 ```
 
-initializes network debt account with max limit and assigns access contract provided.
+initializes lost debt account with max limit and assigns access contract provided.
 
 *should be called directly after deployment (see OpenZeppelin upgradeable standards).*
 
@@ -180,15 +180,15 @@ function burnFrom(address account, uint256 amount) external nonpayable
 | account | address | undefined |
 | amount | uint256 | undefined |
 
-### burnNetworkDebt
+### burnLostDebt
 
 ```solidity
-function burnNetworkDebt(address member, uint256 amount) external nonpayable returns (uint256)
+function burnLostDebt(address member, uint256 amount) external nonpayable returns (uint256)
 ```
 
-Reduces network debt in exchange for reserve reimbursement.
+Reduces lost debt in exchange for assurance reimbursement.
 
-*Must have sufficient network debt or pool debt to service.*
+*Must have sufficient lost debt to service.*
 
 #### Parameters
 
@@ -201,7 +201,7 @@ Reduces network debt in exchange for reserve reimbursement.
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | reimbursement amount from reserve pool |
+| _0 | uint256 | reimbursement amount from assurance pool |
 
 ### createCreditLine
 
@@ -219,7 +219,7 @@ called by the underwriting layer to assign credit lines
 |---|---|---|
 | member | address | address of line holder |
 | limit | uint256 | credit limit of new line |
-| initialBalance | uint256 | positive balance to initialize member with (will increment network debt) |
+| initialBalance | uint256 | positive balance to initialize member with (will increment lost debt) |
 
 ### creditBalanceOf
 
@@ -367,6 +367,23 @@ function increaseAllowance(address spender, uint256 addedValue) external nonpaya
 |---|---|---|
 | _0 | bool | undefined |
 
+### lostDebt
+
+```solidity
+function lostDebt() external view returns (uint256)
+```
+
+Shared account that manages the rectification of lost debt.
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | amount of lost debt shared by network participants. |
+
 ### name
 
 ```solidity
@@ -383,23 +400,6 @@ function name() external view returns (string)
 | Name | Type | Description |
 |---|---|---|
 | _0 | string | undefined |
-
-### networkDebt
-
-```solidity
-function networkDebt() external view returns (uint256)
-```
-
-Network account that manages the rectification of defaulted debt accounts.
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | amount of debt owned by the network. |
 
 ### repayCreditBalance
 
@@ -570,7 +570,7 @@ update existing credit lines
 function writeOffCreditLine(address member) external nonpayable
 ```
 
-transfer a given member&#39;s debt to the network debt account
+transfer a given member&#39;s debt to the lost debt account
 
 
 
@@ -771,10 +771,10 @@ event Initialized(uint8 version)
 |---|---|---|
 | version  | uint8 | undefined |
 
-### NetworkDebtBurned
+### LostDebtBurned
 
 ```solidity
-event NetworkDebtBurned(address member, uint256 amount)
+event LostDebtBurned(address member, uint256 amount)
 ```
 
 

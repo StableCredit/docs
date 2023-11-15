@@ -389,7 +389,7 @@ function syncCreditPeriod(address member) external nonpayable returns (bool)
 
 syncs the credit period state and returns validation status.
 
-*this function is intended to be called after credit expiration to ensure that defaulted debt is written off to the network debt account.*
+*this function is intended to be called after credit expiration to ensure that defaulted debt is written off as lost debt.*
 
 #### Parameters
 
